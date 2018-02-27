@@ -1,4 +1,4 @@
-# Codigo de ayuda para Latex
+# Código de ayuda para Latex
 
 Iniciamos el documento con:
 ```Latex
