@@ -1,0 +1,133 @@
+# Codigo de ayuda para Latex
+
+```Latex
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage{graphicx}
+
+% Definimos macros o ecuaciones que usaremos a lo largo del documento
+\def\eq1{y=\frac{x}{x^2+3x+2}}
+
+\begin{document}
+
+% Indice, automaticamente pone los sections y subsections
+\tableofcontents
+
+\title{MiTitulo}
+\author{Richie}
+\date{\today}
+\maketitle
+
+\section{Seccion uno (20 pts)}
+\subsection{Subseccion}
+\subsection{Subseccion}
+\section{Seccion dos}
+\subsection{Subseccion}
+
+
+Numeros naturales $\mathbb{N}$, gracias al paquete "amsfonts".
+$\mathbb{Z}$
+
+My text \textit{italiano} texto.
+Ahora es \textbf{negro}.
+Y ahora es  \textsc{MAYUSCULAS}.
+Y ahora escrito por un  \texttt{typewriter} \\
+Soy un sitio web \texttt{http://www.google.com.mx}\\
+
+Usando Macros, una ecuaciÃ³n definida arriba: $\eq1$
+\\
+letras grandes \begin{Large}
+holaaaaa
+\end{Large}
+
+texto \begin{center}
+centrado
+\end{center}
+
+Texto justificado 
+\begin{flushleft}
+texto texto texto
+\end{flushleft}
+
+Hola que hace $(x+1)$ and $(x+3)$\\
+
+supperscripts:
+$$ 2x^2$$
+$$ 2x^{3x+4}$$
+
+subscripts:
+$$x_1$$
+$$x_{12}$$
+$${{x_1}_2}_3$$
+
+trig functions:
+$$y=\sin{x}$$
+
+log functions:
+$$\log{x}$$
+$$\ln{x}$$
+
+square roots:
+$$\sqrt[3]{x^{3x+2}}$$
+
+fractions:\\
+About $\frac{2}{3}$ of the glass if full.\\
+\\
+Fracciones mas grandes $\displaystyle{\frac{2}{3}}$ of the glass if full.
+
+$$\frac{x}{x^2+x+1}$$
+
+Parentesis:
+$$\{a,b,c,d,e\}$$
+
+$$3\left(\frac{2}{3}\right)$$
+
+$$3\left[\frac{2}{3}\right]$$
+
+$$3\left\{\frac{2}{3}\right\}$$
+
+$$\left. \frac{dy}{dx} \right|_{x=1}$$
+
+Tables, c una columna, cc dos columnas...\\
+con ampersan cambiamos de columna.\\
+
+\begin{tabular}{|c|ccccc|}
+\hline
+$x$  & 1 & 2 & 3 & 4 & 5 \\ \hline
+$f(x)$  & 11 & 22 & 33 & 43 & 54 \\ \hline
+\end{tabular}
+
+
+Ecuaciones, con amperson se alinean los = :
+El asterisco oculta los indices de la derecha
+\begin{eqnarray*}
+5x^2-9 &=& x + 3 \\
+3x^2-9 &=& 12 \\
+5x^2-9 &=& x + 3\\
+x&\approx&\pm1.2323
+\end{eqnarray*}
+
+
+Enumeraciones:
+\begin{enumerate}
+\item Pencil
+\item calculator
+\item ruler
+	\begin{enumerate}
+	\item adasdads
+	\begin{enumerate}
+	\item adasdads
+	\end{enumerate}
+	\item adsdsdsd
+	\item adsdsdsd
+	\end{enumerate}
+\item graph
+\end{enumerate}
+
+Usando imagenes
+\\
+\includegraphics[width=5in]{imagen.png}
+
+\end{document}
+```
