@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage[]{algorithm2e}
+\usepackage{mathtools}
+
+\begin{document}
+
+\title{Exercise 4.6, Sutton-Barto}
+\author{Ricardo Montesinos Fernandez}
+\date{\small{}}
+\maketitle
+
+Exercise 4.6, 
+How would policy iteration be defined for action values? Give a complete algorithm for computing $q_{*}$, analogous to that on page 65 for computing $v_{*}$. Please pay special attention to this exercise, because the ideas involved will be used throughout the rest of the book.
+\\ \\
+\begin{algorithm}[H]
+1. Initialization $Q(s,a) \in \mathbb{R}$ and $\pi(s) \in A(s)$ arbitrarily for all $s \in S$.
+
+2. Policy Evaluation \\
+\Repeat{$\Delta < 0$ (small...)}{
+	$\Delta \gets \emptyset$\;
+	 \ForEach{$s \in S$ and $a \in A$}{	
+		$q \leftarrow Q(s,a)$ \\
+		$Q(s,a) \leftarrow R(s,a) + \gamma  \sum_{s'}^{ }p(s', r|s, a) q(s',\pi(s'))$ \\
+		$\Delta \leftarrow max(\Delta,|q - Q(s,a)|) $\\
+	}
+}
+
+3. Policy Improvement\\
+
+\Begin{
+	$policy\_stable \leftarrow True$\\
+	 \ForEach{$(s,a)$}{	
+	 	$old\_action \leftarrow \pi(s)$\\
+	 	$\pi(s) \gets arg max_{a}^{ }\ q_{\pi}(s,a)$\\
+	 	
+	 	\If{$old\_action \neq \pi(s)$ }{
+	 		$policy\_stable \gets False$
+	 	}
+	 }
+	 \eIf{$policy\_stable$ }{
+	 		Stop and Return $q \approx q_{*}^{ }$ and $\pi \approx \pi_{*}^{ }$
+	 	}{
+	 		Go to Step 2.
+	 	}
+}
+
+Where:
+$q_{\pi}(s,a) = \sum_{r,s'}^{ }p(s', r|s, a) [r + \gamma q(s', \pi(s'))]$\\
+
+ \caption{Policy iteration (using iterative policy evaluation)}
+\end{algorithm}
+
+
+\end{document}

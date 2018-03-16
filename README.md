@@ -202,3 +202,16 @@ Fin del documento:
 ```Latex
 \end{document}
 ```
+
+TIPS:
+Para numerar páginas en números romanos:
+
+```Latex
+\begin{document}
+\pagenumbering{Roman}
+<preliminary material>
+\pagenumbering{arabic}
+<main material>
+\end{document}
+```
+
