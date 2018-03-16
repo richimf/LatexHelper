@@ -14,6 +14,8 @@ Especificamos paquetes:
 \usepackage{enumerate}
 \usepackage[utf8]{inputenc}
 \usepackage{setspace}
+\usepackage[]{algorithm2e}
+
 ```
 Definimos macros o ecuaciones que usaremos a lo largo del documento
 ```Latex
