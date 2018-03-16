@@ -4,7 +4,7 @@ Iniciamos el documento con:
 ```Latex
 \documentclass[12pt]{article}
 ```
-Especificamos paquetes:
+Especificamos paquetes, [ver más](https://github.com/richimf/LatexHelper/blob/master/Packages.md):
 
 ```Latex
 \usepackage{amsfonts}
